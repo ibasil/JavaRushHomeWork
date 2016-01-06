@@ -34,21 +34,23 @@ public class Solution {
     {
         // implement step #5 here - реализуйте задание №5 тут
        // thePlanet = Sun.getInstance();
-        String s = "";
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-            s = reader.readLine();
-            if(s.equals(Planet.SUN)) {
+        switch(reader.readLine()) {
+            case Planet.SUN:
                 thePlanet = Sun.getInstance();
-            }
-            if(s.equals(Planet.MOON)) {
+                break;
+            case Planet.MOON:
                 thePlanet = Moon.getInstance();
-            }
-            if(s.equals(Planet.EARTH)) {
+                break;
+            case Planet.EARTH:
                 thePlanet = Earth.getInstance();
-            } else {
+                break;
+            default:
                 thePlanet = null;
-            }
+
+        }
 
     }
 }
